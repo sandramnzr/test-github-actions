@@ -1,0 +1,21 @@
+name: Main
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Environment'
+        type: environment
+        required: true
+
+jobs:
+ main:
+    name: Main
+    runs-on: ubuntu-latest
+
+    environment: ${{ github.event.inputs.environment }}
+
+    steps:
+      - name: Echo inputs
+        run: |
+          echo "Target env: ${{ github.environment }}"
