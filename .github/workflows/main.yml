@@ -8,5 +8,16 @@ jobs:
     name: Main
     runs-on: ubuntu-latest
     steps:
-      - run: |
-          echo "Run"
+      - name: Checkout
+        uses: actions/checkout@v3.0.2
+        with:
+          ref: feature/test
+          
+      - name: Change
+        run: mkdir change
+        
+      - name: Commit
+        run: git add .
+            git commit -m "Changes"
+            git push
+          
