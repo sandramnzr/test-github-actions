@@ -14,13 +14,11 @@ jobs:
           ref: feature/test
           
       - name: Change
-        run: mkdir change
-        
-      - name: Add
-        run: git add .
-        
-      - name: Commit
-        run: git commit -m "Changes"
-        
-      - name: Push
-        run: git push
+        run: |
+          git config --global user.email "sandra.mainzer@quinscape.de"
+          git config --global user.name "Sandra Mainzer"
+          git pull
+          mkdir change
+          git add .
+          git commit -m "Changes"
+          git push
