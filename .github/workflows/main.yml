@@ -8,5 +8,6 @@ jobs:
     name: Main
     runs-on: ubuntu-latest
     steps:
-      - run: |
-          echo "Run"
+      - name: Check selected Branch
+        run: |
+          echo "Selected Branch: $github.ref_name"
