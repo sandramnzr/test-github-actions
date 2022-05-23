@@ -2,3 +2,8 @@ name: Main
 
 on:
   workflow_dispatch:
+
+jobs:
+ main:
+    name: Main
+    runs-on: ubuntu-latest
