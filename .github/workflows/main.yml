@@ -16,8 +16,11 @@ jobs:
       - name: Change
         run: mkdir change
         
-      - name: Commit
+      - name: Add
         run: git add .
-            git commit -m "Changes"
-            git push
-          
+        
+      - name: Commit
+        run: git commit -m "Changes"
+        
+      - name: Push
+        run: git push
