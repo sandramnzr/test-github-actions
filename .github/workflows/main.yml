@@ -10,4 +10,4 @@ jobs:
     steps:
       - name: Check selected Branch
         run: |
-          echo "Selected Branch: $github.ref_name"
+          echo "Selected Branch: " + ${{ github.ref_name }}
