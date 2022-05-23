@@ -18,7 +18,7 @@ jobs:
           git config --global user.email "sandra.mainzer@quinscape.de"
           git config --global user.name "Sandra Mainzer"
           git pull
-          mkdir change
+          touch foo.bar
           git add .
           git commit -m "Changes"
           git push
