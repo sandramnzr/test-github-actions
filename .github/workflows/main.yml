@@ -22,4 +22,4 @@ jobs:
         env:
           MY_SUPER_SECRET: ${{ secrets.TARGET_URL }}
         run: |
-          echo "$MY_SUPER_SECRET"
+          echo "${{ secrets.TARGET_URL }}"
