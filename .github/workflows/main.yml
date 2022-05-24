@@ -23,3 +23,4 @@ jobs:
           MY_SUPER_SECRET: ${{ secrets.TARGET_URL }}
         run: |
           echo "${{ secrets.TARGET_URL }}"
+          echo "${{ secrets.TEST }}"
