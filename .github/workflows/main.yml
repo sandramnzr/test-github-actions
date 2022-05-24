@@ -17,8 +17,5 @@ jobs:
     steps:
       - name: Access env token
         run: |
-          echo ${{ github.event.inputs.environment }}
           echo $TARGET_ENV
-          echo $TARGET_ENV.name
-          echo $TARGET_ENV.secrets.TARGET_URL
-          echo ${{ secrets.TARGET_URL }}
+          echo $TARGET_ENV.TARGET_URL
