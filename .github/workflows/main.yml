@@ -2,23 +2,23 @@ name: Main
 
 on:
   workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Environment to run tests against'
+        type: environment
+        required: true
+env: 
+  TARGET_ENV: ${{ github.event.inputs.environment }}
 
 jobs:
  main:
     name: Main
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3.0.2
-        with:
-          ref: feature/test
-          
-      - name: Change
+      - name: Access env token
         run: |
-          git config --global user.email "sandra.mainzer@quinscape.de"
-          git config --global user.name "Sandra Mainzer"
-          git pull
-          touch foo.bar
-          git add .
-          git commit -m "Changes"
-          git push
+          echo ${{ github.event.inputs.environment }}
+          echo $TARGET_ENV
+          echo $TARGET_ENV.name
+          echo $TARGET_ENV.secrets.TARGET_URL
+          echo ${{ secrets.TARGET_URL }}
