@@ -23,7 +23,7 @@ jobs:
     name: Main
     runs-on: ubuntu-latest
     environment:
-      name: ${{ $TARGET_ENVIRONMENT }}
+      name: ${{ github.event.inputs.environment }}
     env:
       MY_SUPER_SECRET: ${{ secrets.TARGET_URL }}
       MY_TEST: ${{ secrets.TEST }}
