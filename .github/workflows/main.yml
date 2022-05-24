@@ -21,6 +21,7 @@ jobs:
       - name: again
         env:
           MY_SUPER_SECRET: ${{ secrets.TARGET_URL }}
+          MY_TEST: ${{ secrets.TEST }}
         run: |
-          echo "${{ secrets.TARGET_URL }}"
-          echo "${{ secrets.TEST }}"
+          echo "$MY_SUPER_SECRET"
+          echo "$MY_TEST"
