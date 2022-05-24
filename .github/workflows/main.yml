@@ -16,6 +16,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Access env token
-        run: |
-          echo $TARGET_ENV
-          echo $TARGET_ENV.TARGET_URL
+        run: env
