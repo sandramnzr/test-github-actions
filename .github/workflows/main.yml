@@ -12,8 +12,14 @@ jobs:
  main:
     name: Main
     runs-on: ubuntu-latest
-    env:
-      TARGET_ENV: ${{ github.event.inputs.environment }}
+    environment:
+      name: ${{ github.event.inputs.environment }}
     steps:
       - name: Access env token
         run: env
+        
+      - name: again
+        env:
+          MY_SUPER_SECRET: ${{ secrets.TARGET_URL }}
+        run: |
+          echo $MY_SUPER_SECRET
