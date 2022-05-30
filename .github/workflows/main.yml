@@ -2,6 +2,13 @@ name: Main
 
 on:
   workflow_dispatch:
+    inputs:
+      environment:
+        type: choice
+        required: true
+        options:
+          - 'Test'
+          - 'Anders'
 
 jobs:
  main:
@@ -10,4 +17,4 @@ jobs:
     steps:
       - name: Check selected Branch
         run: |
-          echo "Selected Branch: " + ${{ github.ref_name }}
+          echo "Selected URL: " + ${{ fromJson('{ 'Test': 'i386", 'Anders': "x86_64" }')[ ${{ github.event.inputs.environment }} ] }}
