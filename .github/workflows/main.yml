@@ -32,4 +32,4 @@ jobs:
       - name: Print your favorite fruit to STDOUT
         run: |
           echo "${{ inputs.name }}'s favorite fruit is ${{ inputs.fruit }}"
-          echo "${{ github.event.inputs.environment.secrets.TARGET_URL }}"
+          echo "${{ github.event.inputs.environment.TARGET_URL }}"
