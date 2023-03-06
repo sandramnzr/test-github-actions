@@ -10,7 +10,7 @@ on:
         type: choice
         options:
           - strawberry
-          - apple
+          - apple 🍏
           - chocolate
       are_you_happy:
         description: 'True if you are happy'
@@ -25,11 +25,9 @@ on:
         type: environment
         required: true
 jobs:
- main:
-    name: Main
+  print-fruit:
     runs-on: ubuntu-latest
+    if:  ${{ inputs.are_you_happy }}
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3.0.2
-        with:
-          ref: feature/test
+      - name: Print your favorite fruit to STDOUT
+        run: echo ${{ inputs.name }}'s favorite fruit is ${{ inputs.fruit }}
