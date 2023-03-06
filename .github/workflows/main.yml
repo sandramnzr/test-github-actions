@@ -30,4 +30,4 @@ jobs:
     if:  ${{ inputs.are_you_happy }}
     steps:
       - name: Print your favorite fruit to STDOUT
-        run: echo ${{ inputs.name }}s favorite fruit is ${{ inputs.fruit }}
+        run: echo "${{ inputs.name }}'s favorite fruit is ${{ inputs.fruit }}"
