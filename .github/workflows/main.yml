@@ -6,12 +6,12 @@ on:
       fruit:
         description: 'Which is your favorite fruit?'
         required: true
-        default: 'chocolate'
+        default: '🍫'
         type: choice
         options:
-          - strawberry
-          - apple 🍏
-          - chocolate
+          - 🍓
+          - 🍏
+          - 🍫
       are_you_happy:
         description: 'True if you are happy'
         required: true
